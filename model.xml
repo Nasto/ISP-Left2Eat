@@ -1,141 +1,35 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 	<featureModel chosenLayoutAlgorithm="1">
 		<struct>
-			<and abstract="true" mandatory="true" name="Left2eat">
-				<and abstract="true" mandatory="true" name="Best-before-date">
+			<and abstract="true" mandatory="true" name="Left2eatAnt">
+				<and abstract="true" mandatory="true" name="BestBeforeDate">
 					<or name="Reminder">
-						<description>
-							Erinnerung an bald ablaufende Lebensmittel
-						</description>
-						<feature mandatory="true" name="Notification_Text">
-							<description>
-								Ablauferinnerung in Textform 
-							</description>
-						</feature>
-						<feature mandatory="true" name="Notification_Sound">
-							<description>
-								Ablauferinnerung durch Signalton
-							</description>
-						</feature>
-						<feature mandatory="true" name="Notification_Image">
-							<description>
-								Ablauferinnerung mittels bildlicher Anzeige
-							</description>
-						</feature>
+						<feature mandatory="true" name="NotficationText"/>
+						<feature mandatory="true" name="NotificationSound"/>
+						<feature mandatory="true" name="NotificationImage"/>
 					</or>
 					<or mandatory="true" name="Overview">
-						<description>
-							Übersicht der Lebensmittel im Kühlschrank
-						</description>
-						<feature mandatory="true" name="Text ">
-							<description>
-								Textuelle Auflistung der Lebensmittel
-							</description>
-						</feature>
-						<feature mandatory="true" name="Image">
-							<description>
-								Bildliche Auflistung der Lebensmittel
-							</description>
-						</feature>
-						<feature mandatory="true" name="Date">
-							<description>
-								Auflistung der Ablaufdaten
-							</description>
-						</feature>
+						<feature mandatory="true" name="Text"/>
+						<feature mandatory="true" name="Image"/>
+						<feature mandatory="true" name="Date"/>
 					</or>
 					<and name="Colours">
-						<description>
-							Farbliche hervorhebung nach Ablaufdatum
-						</description>
-						<feature name="Choose colours">
-							<description>
-								Freie Farbwahl
-							</description>
-						</feature>
+						<feature name="ChooseColours"/>
 					</and>
 				</and>
-				<and mandatory="true" name="Fridge contains">
-					<description>
-						Aktueller Inhalt des Kühlschrankes
-					</description>
-					<feature name="Muliple Fridges">
-						<description>
-							Anlegen mehrerer vitrueller Kühlschränke
-						</description>
-					</feature>
-					<feature name="Differentiation of kinds">
-						<description>
-							Unterteilung nach Lebensmittelarten
-						</description>
-					</feature>
+				<and mandatory="true" name="FridgeContains">
+					<feature name="MultipleFridges"/>
+					<feature name="DifferentationOfKinds"/>
 				</and>
 				<and name="Cookbook">
-					<description>
-						Vorimplementiertes Kochbuch
-					</description>
-					<feature name="Own Recipes">
-						<description>
-							Hinzufügen von eigenen Rezepten zum Kochbuch
-						</description>
-					</feature>
-					<feature name="Import Cookbook">
-						<description>
-							Hinzufügen von Rezepten aus externen Quellen
-						</description>
-					</feature>
+					<feature name="OwnRecipes"/>
+					<feature name="ImportCookbook"/>
 				</and>
-				<feature name="Cookbook reverse">
-					<description>
-						Vorimplementiertes Kochbuch, 
-						aus den vorhandenen Zutaten wird ein Rezept vorgeschlagen
-					</description>
-				</feature>
-				<feature name="Shopping List">
-					<description>
-						Editor für Einkaufsliste
-					</description>
-				</feature>
-				<feature name="API to Foodsharing">
-					<description>
-						Foodsharinganbindung zum Teilen von Lebensmitteln
-					</description>
-				</feature>
-				<or abstract="true" name="Cloud-Synchronisation">
-					<description>
-						Synchronisation von APP Daten über die Cloud
-					</description>
-					<feature mandatory="true" name="Sync Fridge">
-						<description>
-							Synchronisation des Kühlschrankinhaltes
-						</description>
-					</feature>
-					<feature mandatory="true" name="Sync Shopping List">
-						<description>
-							Synchronisation der Einkkaufsliste
-						</description>
-					</feature>
-					<feature mandatory="true" name="Sync Cookbook">
-						<description>
-							Synchronisation des Kochbuches
-						</description>
-					</feature>
-				</or>
+				<feature name="CookbookReverse"/>
+				<feature name="ShoppingList"/>
 			</and>
 		</struct>
-		<constraints>
-			<rule>
-				<imp>
-					<var>Sync Shopping List</var>
-					<var>Shopping List</var>
-				</imp>
-			</rule>
-			<rule>
-				<imp>
-					<var>Sync Cookbook</var>
-					<var>Cookbook</var>
-				</imp>
-			</rule>
-		</constraints>
+		<constraints/>
 		<calculations Auto="true" Constraints="true" Features="true" Redundant="true" Tautology="true"/>
 		<comments/>
 		<featureOrder userDefined="false"/>

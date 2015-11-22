@@ -1,27 +1,22 @@
 # Lists all features from the model with manual (first digit) and automatic (second digit) selection
 # 0 = deselected, 1 = selected, 2 = undefined
-21Left2eat
-21Best-before-date
+21Left2eatAnt
+21BestBeforeDate
 11Reminder
-12Notification_Text
-22Notification_Sound
-22Notification_Image
+12NotficationText
+22NotificationSound
+22NotificationImage
 21Overview
-12Text 
+12Text
 22Image
-12Date
+22Date
 22Colours
-22Choose colours
-21Fridge contains
-22Muliple Fridges
-22Differentiation of kinds
+22ChooseColours
+21FridgeContains
+22MultipleFridges
+22DifferentationOfKinds
 12Cookbook
-22Own Recipes
-22Import Cookbook
-12Cookbook reverse
-22Shopping List
-22API to Foodsharing
-22Cloud-Synchronisation
-22Sync Fridge
-22Sync Shopping List
-22Sync Cookbook
+22OwnRecipes
+22ImportCookbook
+22CookbookReverse
+22ShoppingList
