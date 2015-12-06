@@ -1,12 +1,17 @@
 /**
  * TODO description
  */
-public abstract class Food {
+public class Food {
     
 	private String label;
     private Foodtype type;
 
     // da Private, brauchen wir auch getter und setter
+    
+    public Food(String label, int type){
+    	this.label = label;
+    	this.type = Foodtype.values()[type];
+    }
    
     public String getLabel() {
         return label;

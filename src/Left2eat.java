@@ -12,7 +12,7 @@ public class Left2eat {
     public Language language;
     
     //#if Cookbook
-    public Cookbook cookbook = null; // Public damit es von überall zugreifbar bleibt
+    public Cookbook cookbook = null; // Public damit es von ?berall zugreifbar bleibt
     //#endif
     
     //#if Reminder
@@ -20,11 +20,11 @@ public class Left2eat {
     //#endif
     
     //#if ShoppingList
-    public ShoppingList shoppingList = null;
+//@    public ShoppingList shoppingList = null;
     //#endif
     
     //#if MultipleFridges
-    public List<Fridge> fridges;
+//@    public List<Fridge> fridges;
     //#else
     public Fridge fridge;
     //#endif
@@ -36,24 +36,28 @@ public class Left2eat {
     //#endif
 
     public Left2eat() {
+    	//#if Colours
+    	System.out.println("Default colours added!");
+    	//#endif
+    	
 		//#if deDE
-		language = Language.deDE;
+//@		language = Language.deDE;
 		//#elif deAU
-		language = Language.deAU;
+//@		language = Language.deAU;
 		//#elif enGB
-		language = Language.enGB;
+//@		language = Language.enGB;
 		//#elif enUS
-		language = Language.enUS;
+//@		language = Language.enUS;
 		//#endif
 		
 		fridge = new Fridge();
 	}
     
     //#if ChooseColours
-    public void setColours(Color good, Color warn, Color rotten){
-    	this.good = good;
-    	this.warn = warn;
-    	this.rotten = rotten;
-    }
+//@    public void setColours(Color good, Color warn, Color rotten){
+//@    	this.good = good;
+//@    	this.warn = warn;
+//@    	this.rotten = rotten;
+//@    }
     //#endif
 }

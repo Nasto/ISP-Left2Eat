@@ -4,7 +4,7 @@
 			<and abstract="true" mandatory="true" name="Left2eatAnt">
 				<and abstract="true" mandatory="true" name="BestBeforeDate">
 					<or name="Reminder">
-						<feature mandatory="true" name="NotficationText"/>
+						<feature mandatory="true" name="NotificationText"/>
 						<feature mandatory="true" name="NotificationSound"/>
 						<feature mandatory="true" name="NotificationImage"/>
 					</or>

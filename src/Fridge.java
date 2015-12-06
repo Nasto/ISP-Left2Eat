@@ -1,9 +1,14 @@
+import java.util.ArrayList;
 import java.util.List;
 /**
  * TODO description
  */
 public class Fridge {
     private List<Food> content;
+    
+    public Fridge() {
+		content = new ArrayList<Food>();
+	}
 
     public List<Food> getContent() {
         return content;

@@ -19,9 +19,9 @@ public class Cookbook {
     }
 
     //#if OwnRecipes
-    public void addRecipes(Recipe recipes) {
-        this.recipes.add(recipes);
-    }
+//@    public void addRecipes(Recipe recipes) {
+//@        this.recipes.add(recipes);
+//@    }
     //#endif
 }
 //#endif
